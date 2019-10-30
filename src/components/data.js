@@ -1,4 +1,4 @@
-const dataJSON = {
+const data = {
   "count": 87,
   "next": "https://swapi.co/api/people/?page=2",
   "previous": null,
@@ -276,4 +276,4 @@ const dataJSON = {
     }
   ]
 };
-export default dataJSON
+export default data

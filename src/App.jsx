@@ -1,16 +1,14 @@
 import React from 'react';
-import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
-import Table from "./components/Table";
+import SearchTable from './components/searchTable';
+import Data from './components/data'
+
 
 class App extends React.Component {
     render() {
         return(
-            <BrowserRouter>
-                <Switch>
-                    <Route exact path="/" component={Table}/>
-                    <Redirect to="/"/>
-                </Switch>
-            </BrowserRouter>
+            <div>
+                <SearchTable data={Data}/>
+            </div>
         )
     }
 }

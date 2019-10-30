@@ -1,13 +1,16 @@
 import React from 'react';
-import dataJSON from "./data";
-import TableItem from "./TableItem";
+import TableRow from "./TableItem";
 import './table.css';
 
 export default class Table extends React.Component {
     render() {
-        const info = dataJSON.results.map((item) => {
+        const filter = this.props.filter;
+        const info = this.props.data.results.map((item) => {
+            if (item.name.indexOf(filter) === -1) {
+                return;
+              }
             return (
-                <TableItem key={item.name} {...item}/>
+                <TableRow key={item.name} {...item}/>
             );
         });
 
